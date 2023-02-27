@@ -1,3 +1,114 @@
+@font-face {
+  font-family: "roboto";
+  src: url("./fonts/Roboto-Thin.ttf");
+}
+@font-face {
+  font-family: "elsie";
+  src: url("./fonts/Elsie-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
 .App {
-  background-color: orange;
+  display: flex;
+  flex-direction: column;
+}
+.App nav {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid grey;
+  font-family: "roboto";
+}
+.App nav .logo {
+  width: 40px;
+  cursor: pointer;
+}
+@media (max-width: 420px) {
+  .App nav .logo {
+    display: none;
+  }
+}
+.App nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+@media (max-width: 500px) {
+  .App nav ul {
+    gap: 5%;
+  }
+}
+@media (max-width: 400px) {
+  .App nav ul {
+    gap: 10px;
+  }
+}
+.App nav ul li {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.App nav ul li .nav-main {
+  color: rgb(221, 91, 88);
+}
+.App nav ul li:hover {
+  color: rgb(221, 91, 88);
+}
+.App nav .nav-cv {
+  width: 150px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(221, 91, 88);
+  border: 1px solid rgb(221, 91, 88);
+  border-radius: 10px;
+}
+@media (max-width: 650px) {
+  .App nav .nav-cv {
+    display: none;
+  }
+}
+.App .main {
+  width: 100%;
+  height: 100vh;
+  background: url("./images/spirit.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.App .main::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(38, 38, 38, 0.633);
 }/*# sourceMappingURL=App.css.map */
