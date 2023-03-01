@@ -6,6 +6,149 @@
   font-family: "elsie";
   src: url("./fonts/Elsie-Regular.ttf");
 }
+.main {
+  width: 100%;
+  height: 100vh;
+  background: url("./images/wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .main-content {
+  width: 60%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.main .main-content .main-image-background {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 7s ease infinite;
+  animation: gradient 7s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .main-content .main-image-background .main-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+@media (max-width: 600px) {
+  .main .main-content .main-image-background .main-image {
+    width: 230px;
+    height: 230px;
+  }
+}
+@media (max-width: 600px) {
+  .main .main-content .main-image-background {
+    width: 250px;
+    height: 250px;
+  }
+}
+.main .main-content .main-name {
+  font-family: "elsie";
+  color: rgb(221, 91, 88);
+  font-size: 40px;
+}
+@media (max-width: 600px) {
+  .main .main-content .main-name {
+    text-align: center;
+  }
+}
+.main .main-content .profession {
+  font-size: 30px;
+  font-family: "elsie";
+  color: #e73c7e;
+}
+.main .main-content .main-about {
+  width: 70%;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-family: "roboto";
+}
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.about {
+  width: 100%;
+  height: 100vh;
+  background: url("./images/about.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.skills {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./images/js.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.contact {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./images/contact.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -37,8 +180,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-bottom: 1px solid grey;
   font-family: "roboto";
+  background: rgba(70, 103, 140, 0.633);
+  box-shadow: 10px 0 10px #383838;
 }
 .App nav .logo {
   width: 40px;
@@ -76,6 +220,9 @@ img {
 .App nav ul li .nav-main {
   color: rgb(221, 91, 88);
 }
+.App nav ul li .nav-skills {
+  color: orange;
+}
 .App nav ul li:hover {
   color: rgb(221, 91, 88);
 }
@@ -93,22 +240,4 @@ img {
   .App nav .nav-cv {
     display: none;
   }
-}
-.App .main {
-  width: 100%;
-  height: 100vh;
-  background: url("./images/spirit.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-.App .main::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(38, 38, 38, 0.633);
 }/*# sourceMappingURL=App.css.map */

@@ -10,6 +10,11 @@
     src: url('./fonts/Elsie-Regular.ttf');
 }
 
+@import './components/main/main';
+@import './components/about/about';
+@import './components/skills/skills';
+@import './components/contact/contact';
+
 * {
     margin: 0;
     padding: 0;
@@ -41,8 +46,9 @@ img {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        border-bottom: 1px solid grey;
         font-family: 'roboto';
+        background: rgba(70, 103, 140, 0.633);
+        box-shadow: 10px 0 10px #383838;
 
         .logo {
             width: 40px;
@@ -78,6 +84,10 @@ img {
                 .nav-main {
                     color: $pRed;
                 }
+
+                .nav-skills {
+                    color: orange;
+                }
             }
 
             li:hover {
@@ -99,25 +109,5 @@ img {
                 display: none;
             }
         }
-    }
-
-    .main {
-        width: 100%;
-        height: 100vh;
-        background: url('./images/spirit.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        position: relative;
-    }
-
-    .main::after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: rgba(38, 38, 38, 0.633);
     }
 }
