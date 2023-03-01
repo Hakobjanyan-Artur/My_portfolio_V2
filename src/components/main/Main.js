@@ -74,7 +74,6 @@ export default function Main() {
                     </div>
                 </div>
                 <h1 className="main-name">Artur Hakobjanyan</h1>
-                {/* <h2 className='profession'>Front-End Developer</h2> */}
                 <p className="main-about">{aboutMe + '|'}</p>
             </div>
         </div>
