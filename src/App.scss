@@ -34,6 +34,11 @@ img {
     max-width: 100%;
 }
 
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
 .App {
     display: flex;
     flex-direction: column;

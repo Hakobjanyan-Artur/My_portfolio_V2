@@ -6,10 +6,132 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    position: relative;
+    padding-top: 150px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
+    @media (max-width: 850px) {
+        padding-top: 70px;
+    }
+
+    .container {
+        min-height: 60%;
+        display: flex;
+        gap: 50px;
+
+        @media(max-width: 950px) {
+            max-width: 850px;
+        }
+
+        @media(max-width: 850px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .about-left {
+            width: 50%;
+
+            @media(max-width: 850px) {
+                width: 40%;
+            }
+
+            @media(max-width: 700px) {
+                width: 50%;
+            }
+
+            @media(max-width: 700px) {
+                width: 60%;
+            }
+
+            img {
+                border-radius: 20px;
+            }
+        }
+
+        .about-right {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            @media(max-width: 850px) {
+                width: 90%;
+                gap: 10px;
+            }
+
+            .about-discover {
+                color: #e73c7e;
+            }
+
+            .about-title {
+                color: #fff;
+                position: relative;
+                font-family: 'elsie';
+            }
+
+            .about-title::after {
+                content: '';
+                width: 10%;
+                height: 2px;
+                background: orangered;
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+            }
+
+            .about-about {
+                color: #fff;
+                font-family: 'roboto';
+            }
+
+            .about-info {
+                width: 100%;
+                height: 200px;
+                border: 1px solid orangered;
+                color: #fff;
+                font-family: 'roboto';
+                background: rgba(42, 42, 42, 0.723);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 10px;
+                padding: 0 10px;
+
+                .about-info-left,
+                .about-info-right {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .tel {
+                        color: #fff;
+                    }
+
+                    h4 {
+                        @media(max-width: 500px) {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+                        }
+                    }
+                }
+            }
+
+            .cv {
+                height: 30%;
+                display: flex;
+                align-items: center;
+
+                .about-cv {
+                    width: 150px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $pRed;
+                    border: 1px solid $pRed;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
 }
