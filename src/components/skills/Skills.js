@@ -188,7 +188,7 @@ export default function Skills() {
     const scrollHandler = (e) => {
         // console.log(e.target.documentElement.scrollTop);
 
-        if (e.target.documentElement.scrollTop > 1100 && e.target.documentElement.scrollTop < 1700) {
+        if (e.target.documentElement.scrollTop > 1200 && e.target.documentElement.scrollTop < 1700) {
             htmlRef.current.classList.add('html')
             cssRef.current.classList.add('css')
             jsRef.current.classList.add('js')

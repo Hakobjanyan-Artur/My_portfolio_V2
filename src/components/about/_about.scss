@@ -33,6 +33,8 @@
             border-radius: 20px;
             padding: 10px;
             box-shadow: 0 0 20px rgba(42, 42, 42, 0.723);
+            transform: scale(0);
+            transition: 1s;
 
             @media(max-width: 850px) {
                 width: 40%;
@@ -51,6 +53,10 @@
             }
         }
 
+        .leftScale {
+            transform: scale(100%);
+        }
+
         .about-right {
             width: 40%;
             display: flex;
@@ -63,13 +69,20 @@
             }
 
             .about-discover {
+                display: none;
+            }
+
+            .discBlock {
                 color: #e73c7e;
+                display: block;
             }
 
             .about-title {
                 color: #fff;
                 position: relative;
                 font-family: 'elsie';
+                transform: translateX(100%) scale(0);
+                transition: 1s;
             }
 
             .about-title::after {
@@ -82,9 +95,19 @@
                 left: 0;
             }
 
+            .abtTranslate {
+                transform: translateX(0) scale(100%);
+            }
+
             .about-about {
                 color: #fff;
                 font-family: 'roboto';
+                transform: translateY(-100%) scale(0);
+                transition: 1s;
+            }
+
+            .abab {
+                transform: translateY(0) scale(100%);
             }
 
             .about-info {
@@ -99,6 +122,8 @@
                 justify-content: space-between;
                 border-radius: 10px;
                 padding: 0 10px;
+                transform: translateY(300%) scale(0);
+                transition: 1s;
 
                 .about-info-left,
                 .about-info-right {
@@ -120,10 +145,16 @@
                 }
             }
 
+            .abInfo {
+                transform: translateY(0) scale(100%);
+            }
+
             .cv {
                 height: 30%;
                 display: flex;
                 align-items: center;
+                transform: translateX(-200%) scale(0);
+                transition: 1s;
 
                 .about-cv {
                     width: 150px;
@@ -135,6 +166,10 @@
                     border: 1px solid $pRed;
                     border-radius: 10px;
                 }
+            }
+
+            .cvHiden {
+                transform: translateX(0) scale(100%);
             }
         }
     }
