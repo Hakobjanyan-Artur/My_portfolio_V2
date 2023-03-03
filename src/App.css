@@ -9,7 +9,7 @@
 .main {
   width: 100%;
   height: 100vh;
-  background: url("./images/wallpaper.jpg");
+  background: url("./images/4.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -102,7 +102,7 @@
 .about {
   width: 100%;
   height: 100vh;
-  background: url("./images/about.jpg");
+  background: url("./images/5.jpeg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -132,7 +132,11 @@
   }
 }
 .about .container .about-left {
-  width: 50%;
+  width: 45%;
+  background-color: rgba(42, 42, 42, 0.723);
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(42, 42, 42, 0.723);
 }
 @media (max-width: 850px) {
   .about .container .about-left {
@@ -235,22 +239,160 @@
 .skills {
   width: 100%;
   height: 100vh;
-  background-image: url("./images/js.jpeg");
+  background-image: url("./images/about.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 100px;
+}
+@media (max-width: 750px) {
+  .skills {
+    padding-top: 70px;
+  }
+}
+.skills .container h1 {
+  text-align: center;
+  font-family: "elsie";
   color: #fff;
+}
+.skills .container section {
+  margin-top: 20px;
+  display: flex;
+  height: 80vh;
+}
+@media (max-width: 750px) {
+  .skills .container section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+.skills .container section .skills-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+@media (max-width: 750px) {
+  .skills .container section .skills-left {
+    width: 80%;
+    gap: 20px;
+  }
+}
+.skills .container section .skills-left .scills-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.skills .container section .skills-left .scills-content .orange {
+  color: rgb(221, 91, 88);
+  font-size: 25px;
+}
+.skills .container section .skills-left .scills-content .skills-cont-title {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+.skills .container section .skills-left .scills-content .background {
+  width: 0;
+  height: 3px;
+  background: aqua;
+  border-radius: 20px;
+  box-shadow: 0 0 5px aqua;
+  transition: 2s;
+  position: relative;
+}
+.skills .container section .skills-left .scills-content .background::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: aqua;
+  box-shadow: 0 0 20px aqua;
+  top: -4px;
+  right: 0;
+}
+.skills .container section .skills-left .scills-content .html {
+  width: 80%;
+}
+.skills .container section .skills-left .scills-content .css {
+  width: 70%;
+}
+.skills .container section .skills-left .scills-content .js {
+  width: 55%;
+}
+.skills .container section .skills-left .scills-content .react {
+  width: 70%;
+}
+.skills .container section .skills-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+@media (max-width: 750px) {
+  .skills .container section .skills-right {
+    width: 80%;
+    gap: 20px;
+  }
+}
+.skills .container section .skills-right .skills-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.skills .container section .skills-right .skills-content .orange {
+  color: rgb(221, 91, 88);
+  font-size: 25px;
+}
+.skills .container section .skills-right .skills-content .skills-cont-title {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+.skills .container section .skills-right .skills-content .background {
+  width: 0;
+  height: 3px;
+  background: aqua;
+  border-radius: 20px;
+  box-shadow: 0 0 5px aqua;
+  transition: 2s;
+  position: relative;
+}
+.skills .container section .skills-right .skills-content .background::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: aqua;
+  box-shadow: 0 0 20px aqua;
+  top: -4px;
+  right: 0;
+}
+.skills .container section .skills-right .skills-content .redux {
+  width: 45%;
+}
+.skills .container section .skills-right .skills-content .git {
+  width: 85%;
+}
+.skills .container section .skills-right .skills-content .github {
+  width: 65%;
+}
+.skills .container section .skills-right .skills-content .pSh {
+  width: 50%;
 }
 
 .contact {
   width: 100%;
   height: 100vh;
-  background-image: url("./images/contact.jpg");
+  background-image: url("./images/sk.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -336,6 +478,12 @@ img {
   transition: 0.5s;
 }
 .App nav ul li .nav-main {
+  color: rgb(221, 91, 88);
+}
+.App nav ul li .main-txt {
+  color: #fff;
+}
+.App nav ul li .main-txt:hover {
   color: rgb(221, 91, 88);
 }
 .App nav ul li .nav-skills {

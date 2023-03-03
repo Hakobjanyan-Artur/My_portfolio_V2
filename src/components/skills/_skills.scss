@@ -1,15 +1,176 @@
 .skills {
     width: 100%;
     height: 100vh;
-    background-image: url('./images/js.jpeg');
+    background-image: url('./images/about.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    position: relative;
+    padding-top: 100px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
+    @media(max-width: 750px) {
+        padding-top: 70px;
+    }
+
+    .container {
+
+        h1 {
+            text-align: center;
+            font-family: 'elsie';
+            color: #fff;
+        }
+
+        section {
+            margin-top: 20px;
+            display: flex;
+            height: 80vh;
+
+            @media(max-width: 750px) {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .skills-left {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 70px;
+
+                @media(max-width: 750px) {
+                    width: 80%;
+                    gap: 20px;
+                }
+
+                .scills-content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .orange {
+                        color: $pRed;
+                        font-size: 25px;
+                    }
+
+                    .skills-cont-title {
+                        color: #fff;
+                        display: flex;
+                        justify-content: space-between;
+                        width: 90%;
+                    }
+
+                    .background {
+                        width: 0;
+                        height: 3px;
+                        background: aqua;
+                        border-radius: 20px;
+                        box-shadow: 0 0 5px aqua;
+                        transition: 2s;
+                        position: relative;
+                    }
+
+                    .background::after {
+                        position: absolute;
+                        content: "";
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background: aqua;
+                        box-shadow: 0 0 20px aqua;
+                        top: -4px;
+                        right: 0;
+                    }
+
+                    .html {
+                        width: 80%;
+                    }
+
+                    .css {
+                        width: 70%;
+                    }
+
+                    .js {
+                        width: 55%;
+                    }
+
+                    .react {
+                        width: 70%;
+                    }
+                }
+            }
+
+            .skills-right {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 70px;
+
+
+                @media(max-width: 750px) {
+                    width: 80%;
+                    gap: 20px;
+                }
+
+                .skills-content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+
+                    .orange {
+                        color: $pRed;
+                        font-size: 25px;
+                    }
+
+                    .skills-cont-title {
+                        color: #fff;
+                        display: flex;
+                        justify-content: space-between;
+                        width: 90%;
+                    }
+
+                    .background {
+                        width: 0;
+                        height: 3px;
+                        background: aqua;
+                        border-radius: 20px;
+                        box-shadow: 0 0 5px aqua;
+                        transition: 2s;
+                        position: relative;
+                    }
+
+                    .background::after {
+                        position: absolute;
+                        content: "";
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background: aqua;
+                        box-shadow: 0 0 20px aqua;
+                        top: -4px;
+                        right: 0;
+                    }
+
+                    .redux {
+                        width: 45%;
+                    }
+
+                    .git {
+                        width: 85%;
+                    }
+
+                    .github {
+                        width: 65%;
+                    }
+
+                    .pSh {
+                        width: 50%;
+                    }
+
+                }
+            }
+        }
+    }
 }

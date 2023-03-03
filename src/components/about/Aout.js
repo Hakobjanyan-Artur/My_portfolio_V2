@@ -1,8 +1,7 @@
 import myImage from '../../images/me.jpg'
 import cv from '../../Resume Artur Hakobjanyan.pdf'
 
-export default function About({ top }) {
-    // console.log(top)
+export default function About() {
 
     return (
         <div className='about'>
