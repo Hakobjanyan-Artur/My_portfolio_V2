@@ -137,7 +137,8 @@
   border-radius: 20px;
   padding: 10px;
   box-shadow: 0 0 20px rgba(42, 42, 42, 0.723);
-  transform: scale(0);
+  transform: translateX(-50%);
+  opacity: 0;
   transition: 1s;
 }
 @media (max-width: 850px) {
@@ -153,14 +154,21 @@
 .about .container .about-left img {
   border-radius: 20px;
 }
-.about .container .leftScale {
-  transform: scale(100%);
+.about .container .leftRef {
+  transform: translateX(0);
+  opacity: 1;
 }
 .about .container .about-right {
   width: 40%;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  transform: translateX(50%);
+  opacity: 0;
+  transition: 1s;
+  background-color: rgba(42, 42, 42, 0.723);
+  padding: 10px;
+  border-radius: 20px;
 }
 @media (max-width: 850px) {
   .about .container .about-right {
@@ -169,19 +177,12 @@
   }
 }
 .about .container .about-right .about-discover {
-  transform: scale(0);
-  transition: 1s;
-}
-.about .container .about-right .discBlock {
   color: #e73c7e;
-  transform: scale(100%);
 }
 .about .container .about-right .about-title {
   color: #fff;
   position: relative;
   font-family: "elsie";
-  transform: translateX(100%) scale(0);
-  transition: 1s;
 }
 .about .container .about-right .about-title::after {
   content: "";
@@ -192,17 +193,9 @@
   bottom: -5px;
   left: 0;
 }
-.about .container .about-right .abtTranslate {
-  transform: translateX(0) scale(100%);
-}
 .about .container .about-right .about-about {
   color: #fff;
   font-family: "roboto";
-  transform: translateY(-100%) scale(0);
-  transition: 1s;
-}
-.about .container .about-right .abab {
-  transform: translateY(0) scale(100%);
 }
 .about .container .about-right .about-info {
   width: 100%;
@@ -216,8 +209,6 @@
   justify-content: space-between;
   border-radius: 10px;
   padding: 0 10px;
-  transform: translateY(300%) scale(0);
-  transition: 1s;
 }
 .about .container .about-right .about-info .about-info-left,
 .about .container .about-right .about-info .about-info-right {
@@ -237,15 +228,10 @@
     gap: 5px;
   }
 }
-.about .container .about-right .abInfo {
-  transform: translateY(0) scale(100%);
-}
 .about .container .about-right .cv {
   height: 30%;
   display: flex;
   align-items: center;
-  transform: translateX(-200%) scale(0);
-  transition: 1s;
 }
 .about .container .about-right .cv .about-cv {
   width: 150px;
@@ -257,8 +243,9 @@
   border: 1px solid rgb(221, 91, 88);
   border-radius: 10px;
 }
-.about .container .about-right .cvHiden {
-  transform: translateX(0) scale(100%);
+.about .container .rightRef {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .skills {
@@ -435,6 +422,9 @@
   align-items: center;
   gap: 20px;
   color: #fff;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 1s;
 }
 @media (max-width: 550px) {
   .contact header {
@@ -470,6 +460,10 @@
     height: 100px;
   }
 }
+.contact .headerRef {
+  transform: translateY(0);
+  opacity: 1;
+}
 .contact section {
   display: flex;
   gap: 30px;
@@ -496,6 +490,9 @@
   background-color: #fff;
   padding: 20px;
   border-radius: 20px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 1s;
 }
 @media (max-width: 720px) {
   .contact section .contact-left {
@@ -529,6 +526,10 @@
   justify-content: center;
   align-items: center;
 }
+.contact section .leftRef {
+  transform: translateX(0);
+  opacity: 1;
+}
 .contact section .contact-right {
   background-color: rgba(42, 42, 42, 0.723);
   border-radius: 20px;
@@ -537,6 +538,9 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  transform: translateX(50%);
+  opacity: 0;
+  transition: 1s;
 }
 @media (max-width: 720px) {
   .contact section .contact-right {
@@ -592,6 +596,10 @@
   font-family: "roboto";
   font-size: 14px;
 }
+.contact section .rightRef {
+  transform: translateX(0);
+  opacity: 1;
+}
 
 * {
   margin: 0;
@@ -630,7 +638,7 @@ img {
   align-items: center;
   justify-content: space-around;
   font-family: "roboto";
-  background: rgba(70, 103, 140, 0.633);
+  background: rgba(42, 42, 42, 0.723);
   box-shadow: 10px 0 10px #383838;
 }
 .App nav .logo {

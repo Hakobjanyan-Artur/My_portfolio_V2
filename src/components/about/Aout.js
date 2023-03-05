@@ -4,30 +4,17 @@ import cv from '../../Resume Artur Hakobjanyan.pdf'
 
 export default function About() {
     const leftRef = useRef(null)
-    const discRef = useRef(null)
-    const titleRef = useRef(null)
-    const ababoutRef = useRef(null)
-    const abInfoRef = useRef(null)
-    const cvAbRef = useRef(null)
+    const rightRef = useRef(null)
 
     const scrollHandler = (e) => {
         // console.log(e.target.documentElement.scrollTop);
 
         if (e.target.documentElement.scrollTop > 480 && e.target.documentElement.scrollTop < 1100) {
-            leftRef.current.classList.add('leftScale')
-            discRef.current.classList.add('discBlock')
-            titleRef.current.classList.add('abtTranslate')
-            ababoutRef.current.classList.add('abab')
-            abInfoRef.current.classList.add('abInfo')
-            cvAbRef.current.classList.add('cvHiden')
-
+            leftRef.current.classList.add('leftRef')
+            rightRef.current.classList.add('rightRef')
         } else {
-            leftRef.current.classList.remove('leftScale')
-            discRef.current.classList.remove('discBlock')
-            titleRef.current.classList.remove('abtTranslate')
-            ababoutRef.current.classList.remove('abab')
-            abInfoRef.current.classList.remove('abInfo')
-            cvAbRef.current.classList.remove('cvHiden')
+            leftRef.current.classList.remove('leftRef')
+            rightRef.current.classList.remove('rightRef')
         }
 
     }
@@ -45,17 +32,17 @@ export default function About() {
                 <div ref={leftRef} className="about-left">
                     <img src={myImage} alt="" />
                 </div>
-                <div className="about-right">
-                    <div ref={discRef} className='about-discover'>
+                <div ref={rightRef} className="about-right">
+                    <div className='about-discover'>
                         <h3>Discover</h3>
                     </div>
-                    <div ref={titleRef} className='about-title'>
+                    <div className='about-title'>
                         <h1>About Me</h1>
                     </div>
-                    <div ref={ababoutRef} className='about-about'>
+                    <div className='about-about'>
                         <p>I am front-end developer from Armenia, I love the IT world. I am passionate about creating great software that improves the lives of the people around me. open to new opportunities in front-end development.</p>
                     </div>
-                    <div ref={abInfoRef} className='about-info'>
+                    <div className='about-info'>
                         <div className='about-info-left'>
                             <h4><span>Name:</span> <span>Artur hakobjanyan</span></h4>
                             <h4><span>Phone:</span> <span><a className='tel' href="tel:+37493308017">+374 93 30 80 17</a></span></h4>
@@ -67,7 +54,7 @@ export default function About() {
                             <h4><span>Frilance:</span> <span>Available</span></h4>
                         </div>
                     </div>
-                    <div ref={cvAbRef} className='cv'>
+                    <div className='cv'>
                         <a href={cv} download className='about-cv'>DOWNLOAD CV</a>
                     </div>
                 </div>
