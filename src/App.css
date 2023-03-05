@@ -163,7 +163,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  transform: translateX(50%);
+  transform: translateY(50%);
   opacity: 0;
   transition: 1s;
   background-color: rgba(42, 42, 42, 0.723);
@@ -244,7 +244,7 @@
   border-radius: 10px;
 }
 .about .container .rightRef {
-  transform: translateX(0);
+  transform: translateY(0);
   opacity: 1;
 }
 
@@ -410,11 +410,35 @@
   background-attachment: fixed;
   background-size: cover;
   padding-top: 100px;
+  position: relative;
 }
 @media (max-width: 850px) {
   .contact {
     padding-top: 60px;
   }
+}
+.contact .popup {
+  width: 30%;
+  height: 30%;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(42, 42, 42, 0.723);
+  z-index: 99;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 550px) {
+  .contact .popup {
+    width: 60%;
+  }
+}
+.contact .popup h2 {
+  font-family: "roboto";
 }
 .contact header {
   display: flex;
@@ -509,10 +533,15 @@
 .contact section .contact-left .email {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   width: 300px;
   color: rgba(42, 42, 42, 0.723);
   font-family: "roboto";
+}
+.contact section .contact-left .address h3,
+.contact section .contact-left .phone h3,
+.contact section .contact-left .email h3 {
+  color: rgb(221, 91, 88);
 }
 .contact section .contact-left .address .icon,
 .contact section .contact-left .phone .icon,
@@ -538,7 +567,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  transform: translateX(50%);
+  transform: translateY(50%);
   opacity: 0;
   transition: 1s;
 }
@@ -597,7 +626,7 @@
   font-size: 14px;
 }
 .contact section .rightRef {
-  transform: translateX(0);
+  transform: translateY(0);
   opacity: 1;
 }
 
